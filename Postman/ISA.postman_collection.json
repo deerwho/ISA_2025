@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "0a6cc01d-b496-4481-a848-49450495b1b7",
+		"name": "ISA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45484435",
+		"_collection_link": "https://vojin-4365846.postman.co/workspace/Vojin's-Workspace~2f2259c3-0b1a-49bc-8b79-b2d3b240c5b2/collection/45484435-0a6cc01d-b496-4481-a848-49450495b1b7?action=share&source=collection_link&creator=45484435"
+	},
+	"item": [
+		{
+			"name": "Kreiranje korisnika",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ime\":\"Nikola\",\r\n    \"prezime\":\"Nikolic\",\r\n    \"godine\":\"25\",\r\n    \"email\":\"nikola@gmail.com\",\r\n    \"lozinka\":123456789\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/korisnik/kreiraj-korisnika",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"kreiraj-korisnika"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kreiranje filma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"naziv\":\"Gospodar Prstevova: Druzina Prstena\",\r\n    \"trajanje\":\"185\",\r\n    \"reziser\":\"Piter Dzekson\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/film/kreiraj-film",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"film",
+						"kreiraj-film"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Izmena korisnika",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":5,\r\n    \"ime\":\"Nikola\",\r\n    \"prezime\":\"Nikolic\",\r\n    \"godine\":\"25\",\r\n    \"email\":\"nikola@gmail.com\",\r\n    \"lozinka\":123456789\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/korisnik/izmeni-korisnika",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"izmeni-korisnika"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Izmena filma",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3,\r\n    \"naziv\":\"Gospodar Prstevova: Druzina Prstena\",\r\n    \"trajanje\":\"145\",\r\n    \"reziser\":\"Piter Dzekson\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/film/izmeni-film",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"film",
+						"izmeni-film"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brisanje korisnika",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/korisnik/obrisi-korisnika",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"obrisi-korisnika"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brisanje filma",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/film/obrisi-film",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"film",
+						"obrisi-film"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vracanje svih korisnika preko modela Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/korisnik/vrati-sve-korisnike",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"vrati-sve-korisnike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vracanje svih korisnika preko modela",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/korisnik/vrati-sve-korisnikeModel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"vrati-sve-korisnikeModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vracanje svih filmova preko modela",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/film/vrati-sve-filmoveModel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"film",
+						"vrati-sve-filmoveModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vracanje svih korisnika pagination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pageNumber",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/korisnik/vrati-sve-korisnikePage?pageNumber=0&pageSize=20",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"vrati-sve-korisnikePage"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vracanje svih korisnika i njihovih karti",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/korisnik/vrati-sve-korisnikeKarteModel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"vrati-sve-korisnikeKarteModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vracanje svih korisnika i filmova koje su gledali",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/korisnik/vrati-sve-korisnikeFilmovi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"korisnik",
+						"vrati-sve-korisnikeFilmovi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
