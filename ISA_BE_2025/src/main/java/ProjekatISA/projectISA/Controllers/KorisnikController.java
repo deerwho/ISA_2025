@@ -40,7 +40,7 @@ public class KorisnikController {
     @GetMapping("vrati-sve-korisnike")
     public List<Korisnik> vratiSveKorisnike() {
         var result = korisnikRepository.findAll();
-        //var resultTest=korisnikRepository.findByEmail("vojin@singimail.rs");
+        //var resultTest=korisnikRepository.findByEmail("aleksandar.jelenkovic.22@singimail.rs");
         return result;
     }
 
